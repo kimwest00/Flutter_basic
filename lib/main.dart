@@ -12,8 +12,17 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar:AppBar(title:Text('머리에 글자 넣는법')),
         body:Text('body에는 위젯 그대로'),
-        bottomNavigationBar:BottomAppBar(child:Text('꼬리에는 여기다가'))
-        )
+        bottomNavigationBar:BottomAppBar(
+            child:Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(Icons.phone),
+                Icon(Icons.home),
+                Icon(Icons.contact_page),
+              ],
+              )
+          )
+      )
     );
   }
 }
