@@ -10,11 +10,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar:AppBar(),
-        body:Container(),
-        bottomNavigationBar:BottomAppBar(child:Text('꼬리'))
-
-    )
+        appBar:AppBar(title:Text('머리에 글자 넣는법')),
+        body:Text('body에는 위젯 그대로'),
+        bottomNavigationBar:BottomAppBar(child:Text('꼬리에는 여기다가'))
+        )
     );
   }
 }
