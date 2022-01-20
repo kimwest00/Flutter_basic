@@ -13,6 +13,8 @@ class MyApp extends StatelessWidget {
         appBar:AppBar(title:Text('머리에 글자 넣는법')),
         body:Text('body에는 위젯 그대로'),
         bottomNavigationBar:BottomAppBar(
+          child:SizedBox(
+            height:50,
             child:Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -21,6 +23,7 @@ class MyApp extends StatelessWidget {
                 Icon(Icons.contact_page),
               ],
               )
+          )
           )
       )
     );
