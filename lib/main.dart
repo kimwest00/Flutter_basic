@@ -9,24 +9,34 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar:AppBar(title:Text('머리에 글자 넣는법')),
-        body:Text('body에는 위젯 그대로'),
-        bottomNavigationBar:BottomAppBar(
-          child:SizedBox(
-            height:50,
-            child:Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Icon(Icons.phone),
-                Icon(Icons.home),
-                Icon(Icons.contact_page),
-              ],
-              )
-          )
-          )
-      )
+        home: Scaffold(
+            appBar:AppBar(title:Text('머리에 글자 넣는법')),
+            body:Row(
+                children: [
+                  Image.asset("assets/rufi.jpg",width:150,),
+                  Flexible(child: Container(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("카메라팝니다",style: TextStyle(fontSize: 30,),),
+                          Text("카메라팝니다"),
+                          Text("카메라팝니다",style: TextStyle(fontSize: 20,),),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Icon(Icons.favorite),
+                              Text('4'),
+                            ],
+                          )
+                        ],
+                      )
+                  ),flex: 1,
+                  )
+                ]
+            ),
+        )
     );
+
   }
 }
 
