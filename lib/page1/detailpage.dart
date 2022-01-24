@@ -39,6 +39,58 @@ class DetailPage extends StatelessWidget {
               ],
               ),
               ),
+              Container(
+                child: Row(
+                  children:<Widget> [
+                    ClipRect(child: Image.asset("assets/rufi.jpg",width: 100,height: 100,)),
+                    Container(child: Column(
+                        children:[
+                          Text("유니세프"),
+                          Text("10000")]
+                    ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: Row(
+                  children:<Widget> [
+                    ClipRect(child: Image.asset("assets/rufi.jpg",width: 100,height: 100,)),
+                    Container(child: Column(
+                        children:[
+                          Text("유니세프"),
+                          Text("10000")]
+                    ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: Row(
+                  children:<Widget> [
+                    ClipRect(child: Image.asset("assets/rufi.jpg",width: 100,height: 100,)),
+                    Container(child: Column(
+                        children:[
+                          Text("유니세프"),
+                          Text("10000")]
+                    ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: Row(
+                  children:<Widget> [
+                    ClipRect(child: Image.asset("assets/rufi.jpg",width: 100,height: 100,)),
+                    Container(child: Column(
+                        children:[
+                          Text("유니세프"),
+                          Text("10000")]
+                    ),
+                    ),
+                  ],
+                ),
+              ),
       ]
       ),
     );

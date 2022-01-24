@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_try/page1/detailpage.dart';
 
@@ -101,38 +102,72 @@ class MainPage extends StatelessWidget {
             ),
             body:ListView(
               children: <Widget>[
-                ListTile(
-                  leading:Icon(
-                    Icons.home_filled,
-                    color:Colors.grey[850],
-                  ),
-                  title: Text('노인'),
-                  onTap: (){
-                    Navigator.push(
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children:[
+                  InkWell(
+                    child:Container(width:100,height: 100,color: Colors.red,padding:EdgeInsets.all(30),child: Center(child:Text("아동")),),
+                    onTap: (){
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>DetailPage()
-                        )
+                            builder: (context) =>DetailPage())
                     );
-                  },
+                  }
                 ),
-                ListTile(
-                  leading:Icon(
-                    Icons.people,
-                    color:Colors.grey[850],
-                  ),
-                  title: Text('아동'),
+                  InkWell(
+                    child:Container(width:100,height: 100,color:Colors.blue,padding:EdgeInsets.all(30),child: Center(child:Text("노인")),),
                     onTap: (){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>DetailPage()
-                      )
-                  );
-                },
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                        builder: (context) =>DetailPage())
+                );
+                }
                 ),
+                ]
+                ),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                  InkWell(
+                    child:Container(width:100,height: 100,color:Colors.yellow,child: Center(child:Text("빈곤")),),
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>DetailPage())
+                      );
+                    }
+                ),
+                ]
+              ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children:[
+                  InkWell(
+                    child:Container(width:100,height: 100,color:Colors.orange,child: Center(child:Text("장애")),),
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>DetailPage())
+                      );
+                    }
+                ),InkWell(
+                    child:Container(width:100,height: 100,color:Colors.purple,child: Center(child:Text("동물")),),
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>DetailPage())
+                      );
+                    }
+                )
               ],
             )
+        ]
+            ),
 
             );
 
