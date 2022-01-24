@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_try/page1/detailpage.dart';
 
 void main() => runApp(
     MyApp()
@@ -77,7 +78,7 @@ class MainPage extends StatelessWidget {
                           )
                       );
                     },
-                    trailing: Icon(Icons.add),
+                    trailing: Icon(Icons.arrow_forward_ios),
                   ),
                   ListTile(
                     leading:Icon(
@@ -93,10 +94,45 @@ class MainPage extends StatelessWidget {
                           )
                       );
                     }
+                    ,trailing: Icon(Icons.arrow_forward_ios)
                   )
                 ],
               ),
             ),
+            body:ListView(
+              children: <Widget>[
+                ListTile(
+                  leading:Icon(
+                    Icons.home_filled,
+                    color:Colors.grey[850],
+                  ),
+                  title: Text('노인'),
+                  onTap: (){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>DetailPage()
+                        )
+                    );
+                  },
+                ),
+                ListTile(
+                  leading:Icon(
+                    Icons.people,
+                    color:Colors.grey[850],
+                  ),
+                  title: Text('아동'),
+                    onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>DetailPage()
+                      )
+                  );
+                },
+                ),
+              ],
+            )
 
             );
 
