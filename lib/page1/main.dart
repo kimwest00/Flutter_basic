@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());//앱 구동시켜주세요~
+void main() => runApp(
+    MyApp()
+);//앱 구동시켜주세요~
 
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.purple,
-      ),
-        home: Scaffold(
+      title:'메뉴바를 만들어보자',
+      theme: ThemeData(primarySwatch: Colors.purple),
+      home: MainPage(),
+    );
+
+  }
+}
+class MainPage extends StatelessWidget {
+  const MainPage({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
             appBar:AppBar(
               title:Image.asset("assets/logo.png",width:100,height:50),
               centerTitle: true,
@@ -24,8 +32,6 @@ class MyApp extends StatelessWidget {
                     print('Do you want to search?');
                   },
                 ),
-
-
               ],
             ),
             drawer: Drawer(
@@ -64,6 +70,12 @@ class MyApp extends StatelessWidget {
                     title: Text('회원정보 보기'),
                     onTap:(){
                       print('회원정보 보기');
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>PageView1()
+                          )
+                      );
                     },
                     trailing: Icon(Icons.add),
                   ),
@@ -74,16 +86,56 @@ class MyApp extends StatelessWidget {
                     ),
                     title: Text('구독현황'),
                     onTap:(){
-                      print('picture pressed');
-                    },
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>PageView2()
+                          )
+                      );
+                    }
                   )
                 ],
               ),
             ),
 
-        )
-    );
+            );
+
+
 
   }
 }
+class PageView1 extends StatelessWidget{
+  @override
+  Widget build(BuildContext ctx){
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Page 1'),
+      ),
+      body: Center(
+        child:
+          RaisedButton(child: Text('GO to back'),
+          onPressed: (){
+            Navigator.pop(ctx);
+          }),
+      ),
+    );
+  }
+}
 
+class PageView2 extends StatelessWidget{
+  @override
+  Widget build(BuildContext ctx){
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Page 2'),
+      ),
+      body: Center(
+        child:
+        RaisedButton(child: Text('GO to back'),
+            onPressed: (){
+              Navigator.pop(ctx);
+            }),
+      ),
+    );
+  }
+}
